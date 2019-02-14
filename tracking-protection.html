@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta name="referrer" value="no-referrer">
+<script>
+var testPassed = [true, true, true, true, true, true];
+
+function loaded(category, expected)
+{
+    let element = 'category' + category;
+    console.log('loaded: ' + element + " (expected=" + expected + ")");
+    let elementTag = document.getElementById(element);
+    let color = "green";
+    let qualifier = "correctly";
+    if (!expected) {
+        color = "red";
+        qualifier = "incorrectly";
+        testPassed[category] = false;
+    }
+    if (testPassed[category] || !expected) {
+        elementTag.innerHTML = "<font color='" + color + "'>" + qualifier + " loaded</font>";
+    }
+}
+
+function error(category, expected)
+{
+    let element = 'category' + category;
+    console.log('blocked: ' + element + " (expected=" + expected + ")");
+    let elementTag = document.getElementById(element);
+    let color = "green";
+    let qualifier = "correctly";
+    if (!expected) {
+        color = "red";
+        qualifier = "incorrectly";
+        testPassed[category] = false;
+    }
+    if (testPassed[category] || !expected) {
+        elementTag.innerHTML = "<font color='" + color + "'>" + qualifier + " blocked</font>";
+    }
+}
+</script>
+    </head>
+    <body>
+        <h2>Element events</h2>
+        <div>
+            <ul>
+                <li>Advertising: <span id="category0">...</span></li>
+                <li>Content: <span id="category1">...</span></li>
+                <li>Analytics: <span id="category2">...</span></li>
+                <li>Social: <span id="category3">...</span></li>
+                <li>Cryptomining: <span id="category4">...</span></li>
+                <li>Disconnect: <span id="category5">...</span></li>
+            </ul>
+        </div>
+
+        <h2>Test images</h2>
+        <p>All of these images should be transparent when Shields are ON:</p>
+
+        <ul>
+            <li>Advertising:<br>
+                <font color="red"><b><img src="https://admost.com/img/admostfavicon.png" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="admost.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.augur.io/img/favicon.png" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="augur.io" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://my.justuno.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="jutsuno.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://mailchimp.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="mailchimp.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.att.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="att.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.digitalriver.com/wp-content/themes/digital-river/assets/images/dr-favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="digitalriver.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.ebay.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="ebay.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://rubiconproject.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="rubiconproject.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.owneriq.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="owneriq.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.salesforce.com/content/dam/web/en_ca/www/images/hp/canada-flag-waving-39x20.png" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="salesforce.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.snap.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="snap.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://tinder.com/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="tinder.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://moikrug.ru/favicon.ico" onload="loaded(0, true)" onerror="error(0, false)" border="1" height="100" width="100" title="moikrug.ru" alt="error!" style="border-color: black"></b></font>
+            </li>
+
+            <li>Analytics:<br>
+                <font color="red"><b><img src="https://extremetracking.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="extremetracking.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://crazyegg.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="crazyegg.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://get.gaug.es/wp-content/uploads/2017/12/gaug.es_.png" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="gaug.es" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.fullstory.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="fullstory.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.scorecardresearch.com/images/AICPA_SOC_Seal.png" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.acxiom.com/wp-content/themes/acxiom/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="acxiom.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://polldaddy.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="polldaddy.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.clicktale.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="clicktale.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.ibm.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="ibm.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.markmonitor.com/favicon.ico" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="markmonitor.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://narrative.io/favicon.png" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="narrative.io" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.nielsen.com/content/cus_config/favicons/default/favicon-96x96.png" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="nielsen.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.whiteops.com/hubfs/Logos/mstile-310x310.png" onload="loaded(2, true)" onerror="error(2, false)" border="1" height="100" width="100" title="whiteops.com" alt="error!" style="border-color: black"></b></font>
+            </li>
+
+            <li>Social:<br>
+                <font color="red"><b><img src="https://cache.addthiscdn.com/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="addthiscdn.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.reddit.com/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="reddit.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.linkedin.com/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="linkedin.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://mail.ru/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="mail.ru" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://vk.com/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="vk.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.papayamobile.com/assets/images/as/logo.png" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="papayamobile.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://usocial.pro/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="usocial.pro" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://login.yahoo.com/favicon.ico" onload="loaded(3, true)" onerror="error(3, false)" border="1" height="100" width="100" title="login.yahoo.com" alt="error!" style="border-color: black"></b></font>
+            </li>
+
+            <li>Cryptomining:<br>
+                <font color="red"><b><img src="https://coinhive.com/media/coinhive-icon.png" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="coinhive.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://crypto-loot.com/images/favicon-96x96.png" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="crypto-loot.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://sparechange.io/static/fav/favicon-32x32.png" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="sparechange.io" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://nerohut.com/assets/logo.png" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="nerohut.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://authedmine.com/media/coinhive-icon.png" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="authedmine.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://coinpot.co/favicon.ico" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="coinpot.co" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://gridcash.net/favicon.ico" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="gridcash.net" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://authedwebmine.cz/favicon.ico" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="authedwebmine.cz" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://webminepool.com/favicon.ico" onload="loaded(4, true)" onerror="error(4, false)" border="1" height="100" width="100" title="webminepool.com" alt="error!" style="border-color: black"></b></font>
+            </li>
+
+            <li>Disconnect:<br>
+                <font color="red"><b><img src="https://twitter.com/favicon.ico" onload="loaded(5, true)" onerror="error(5, false)" border="1" height="100" width="100" title="twitter.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://developers.google.com/favicon.ico" onload="loaded(5, true)" onerror="error(5, false)" border="1" height="100" width="100" title="developers.google.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.facebook.com/images/fb_icon_325x325.png" onload="loaded(5, true)" onerror="error(5, false)" border="1" height="100" width="100" title="facebook.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://pbs.twimg.com/favicon.ico" onload="loaded(5, true)" onerror="error(5, false)" border="1" height="100" width="100" title="twimg.com" alt="error!" style="border-color: black"></b></font>
+            </li>
+        </ul>
+
+        <p>All of these images should be displayed correctly regardless of the Shield setting:</p>
+        <ul>
+            <li>Content:<br>
+                <font color="red"><b><img src="https://disqus.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="disqus.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://flattr.com/images/favicons/favicon-32x32.png" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="flattr.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://feedburner.google.com/fb/images/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="feedburner.google.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://getsatisfaction.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="getsatisfaction.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/logo_Google_Ads_192px.max-200x200.png" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="storage.googleapis.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.adobe.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="adobe.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.akamai.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="akamai.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.alexa.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="alexa.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.amazon.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="amazon.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://aol.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="aol.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.bazaarvoice.com/wp-content/themes/bazaarvoice/images/UI/favicon.png" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="bazaarvoice.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.brightcove.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="brightcove.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.buzzfeed.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="buzzfeed.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.blogger.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="blogger.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.mcafee.com/enterprise/en-us/img/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="mcafee.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.oracle.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="oracle.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.pinterest.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="pinterest.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.tumblr.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="tumblr.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.uservoice.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="uservoice.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://flickr.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="flickr.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://developer.yahoo.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="developer.yahoo.com" alt="error!" style="border-color: black"></b></font>
+                <font color="red"><b><img src="https://www.optimizely.com/favicon.ico" onload="loaded(1, true)" onerror="error(1, false)" border="1" height="100" width="100" title="optimizely.com" alt="error!" style="border-color: black"></b></font>
+            </li>
+        </ul>
+
+        <hr>
+        <p>The code behind this page is on <a href="https://github.com/fmarier/brave-test">GitHub</a>.</p>
+    </body>
+</html>
