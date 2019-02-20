@@ -33,6 +33,7 @@
 <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
 <h2>Page plugin (iframe)</h2>
 <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
 <h1>LinkedIn</h1>
 <h2>Share</h2>
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
@@ -40,5 +41,44 @@
 <h2>Follow Company</h2>
 <script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
 <script type="IN/FollowCompany" data-id="7929354" data-counter="top"></script>
+
+<h1>Twitter</h1>
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+<h2>Tweet</h2>
+<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet?text=Hello%20world"
+  data-size="large">
+Tweet</a>
+<h2>Follow</h2>
+<a class="twitter-follow-button"
+  href="https://twitter.com/Brave"
+  data-size="large">
+Follow @Brave</a>
+<h2>Embedded timeline</h2>
+<a class="twitter-timeline"
+  href="https://twitter.com/Brave"
+  data-width="300"
+  data-height="300">
+Tweets by @Brave
+</a>
+<h2>Embedded tweet</h2>
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">...</p>&mdash; Brave Software (@brave) <a href="https://twitter.com/brave/status/794221010484502528">3 Nov 2016</a>
+</blockquote>
 </body>
 </html>
