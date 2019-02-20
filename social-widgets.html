@@ -2,45 +2,65 @@
 <head>
 </head>
 <body>
+
 <h1>Facebook</h1>
 <div id="fb-root"></div>
 <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
-<h2>Like button (JS)</h2>
-<div class="fb-like" data-href="https://fmarier.github.io/brave-testing/social-widgets" data-width="100" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>
-<h2>Like button (iframe)</h2>
-<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffmarier.github.io%2Fbrave-testing%2Fsocial-widgets.html&width=100&layout=standard&action=like&size=large&show_faces=true&share=false&height=80&appId" width="100" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-<h2>Share button (JS)</h2>
-<div class="fb-share-button" data-href="https://fmarier.github.io/brave-testing/social-widgets.html" data-layout="box_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-<h2>Share button (iframe)</h2>
-<iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffmarier.github.io%2Fbrave-testing%2Fsocial-widgets.html&layout=box_count&size=small&mobile_iframe=true&width=59&height=40&appId" width="59" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-<h2>Save button</h2>
-<div class="fb-save" data-uri="https://fmarier.github.io/brave-testing/social-widgets.html" data-size="large"></div>
-<h2>Embedded video (JS)</h2>
-<div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook/videos/10153231379946729/">How to Share With Just Friends</a><p>How to share with just friends.</p>Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on Friday, December 5, 2014</blockquote></div>
-<h2>Embedded video (iframe)</h2>
-<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&width=500&show_text=false&height=280&appId" width="500" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-<h2>Comments (JS)</h2>
-<div class="fb-comments" data-href="https://fmarier.github.io/brave-testing/social-widgets.html" data-width="100" data-numposts="5"></div>
-<h2>Embedded comment (JS)</h2>
-<div class="fb-comment-embed" data-href="https://www.facebook.com/zuck/posts/10102577175875681?comment_id=1193531464007751&amp;reply_comment_id=654912701278942" data-width="560" data-include-parent="false"></div>
-<h2>Embedded comment (iframe)</h2>
-<iframe src="https://www.facebook.com/plugins/comment_embed.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuck%2Fposts%2F10102577175875681%3Fcomment_id%3D1193531464007751%26reply_comment_id%3D654912701278942&width=560&include_parent=false&height=135&appId" width="560" height="135" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-<h2>Embeded post (JS)</h2>
-<div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/20531316728/posts/10154009990506729/" class="fb-xfbml-parse-ignore">Posted by <a href="https://www.facebook.com/facebook/">Facebook</a> on&nbsp;<a href="https://www.facebook.com/20531316728/posts/10154009990506729/">Thursday, August 27, 2015</a></blockquote></div>
-<h2>Embeded post (iframe)</h2>
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=290&appId" width="500" height="290" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
-<h2>Page plugin (JS)</h2>
-<div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div>
-<h2>Page plugin (iframe)</h2>
-<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+
+<table border="1">
+<tr>
+<th>Like (JS)</th><th>Like (iframe)</th><th>Share (JS)</th>
+</tr>
+<tr>
+<td><div class="fb-like" data-href="https://fmarier.github.io/brave-testing/social-widgets" data-width="100" data-layout="standard" data-action="like" data-size="large" data-show-faces="true" data-share="true">Like button (JS)</div></td>
+<td><iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Ffmarier.github.io%2Fbrave-testing%2Fsocial-widgets.html&width=100&layout=standard&action=like&size=large&show_faces=true&share=false&height=80&appId" width="100" height="80" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">Like button (iframe)</iframe></td>
+<td><div class="fb-share-button" data-href="https://fmarier.github.io/brave-testing/social-widgets.html" data-layout="box_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>Share button (JS)</div></td>
+</tr>
+<tr>
+<th>Share (iframe)</th><th>Save</th><th>Embedded video (JS)</th>
+</tr>
+<tr height="300">
+<td><iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Ffmarier.github.io%2Fbrave-testing%2Fsocial-widgets.html&layout=box_count&size=small&mobile_iframe=true&width=59&height=40&appId" width="59" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">Share button (iframe)</iframe></td>
+<td><div class="fb-save" data-uri="https://fmarier.github.io/brave-testing/social-widgets.html" data-size="large">Save button</div></td>
+<td width="520"><div class="fb-video" data-href="https://www.facebook.com/facebook/videos/10153231379946729/" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/facebook/videos/10153231379946729/" class="fb-xfbml-parse-ignore">Embedded video (JS)</blockquote></div></td>
+</tr>
+<tr>
+<th>Embedded video (iframe)</th><th>Comments (JS)</th><th>Embedded comment (JS)</th>
+</tr>
+<tr height="300">
+<td width="580"><iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook%2Fvideos%2F10153231379946729%2F&width=500&show_text=false&height=280&appId" width="500" height="280" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true">Embedded video (iframe)</iframe></td>
+<td><div class="fb-comments" data-href="https://fmarier.github.io/brave-testing/social-widgets.html" data-width="100" data-numposts="5">Comments (JS)</div></td>
+<td><div class="fb-comment-embed" data-href="https://www.facebook.com/zuck/posts/10102577175875681?comment_id=1193531464007751&amp;reply_comment_id=654912701278942" data-width="560" data-include-parent="false">Embedded comment (JS)</div></td>
+</tr>
+<tr>
+<th>Embedded comment (iframe)</th><th>Embedded post (JS)</th><th>Embedded post (iframe)</th>
+</tr>
+<tr>
+<td width="580"><iframe src="https://www.facebook.com/plugins/comment_embed.php?href=https%3A%2F%2Fwww.facebook.com%2Fzuck%2Fposts%2F10102577175875681%3Fcomment_id%3D1193531464007751%26reply_comment_id%3D654912701278942&width=560&include_parent=false&height=135&appId" width="560" height="135" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">Embedded comment (iframe)</iframe></td>
+<td><div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/20531316728/posts/10154009990506729/" class="fb-xfbml-parse-ignore">Embeded post (JS)</blockquote></div></td>
+<td><iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2F20531316728%2Fposts%2F10154009990506729%2F&width=500&show_text=true&height=290&appId" width="500" height="290" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">Embeded post (iframe)</iframe></td>
+</tr>
+<tr>
+<th>Embedded page (JS)</th><th>Embedded page (iframe)</th>
+</tr>
+<tr height="520">
+<td><div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://www.facebook.com/facebook" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>Page plugin (JS)</div></td>
+<td witdh="360"><iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Ffacebook&tabs=timeline&width=340&height=500&small_header=true&adapt_container_width=true&hide_cover=true&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media">Page plugin (iframe)</iframe></td>
+</tr>
+</table>
 
 <h1>LinkedIn</h1>
-<h2>Share</h2>
 <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
-<script type="IN/Share" data-url="https://fmarier.github.io/brave-testing/social-widgets.html"></script>
-<h2>Follow Company</h2>
-<script src="https://platform.linkedin.com/in.js" type="text/javascript"> lang: en_US</script>
-<script type="IN/FollowCompany" data-id="7929354" data-counter="top"></script>
+
+<table border="1">
+<tr>
+<th>Share</th><th>Follow Company</th>
+</tr>
+<tr height="100">
+<td width="200"><script type="IN/Share" data-url="https://fmarier.github.io/brave-testing/social-widgets.html"></script></td>
+<td width="200"><script type="IN/FollowCompany" data-id="7929354" data-counter="top"></script></td>
+</tr>
+</table>
 
 <h1>Twitter</h1>
 <script>window.twttr = (function(d, s, id) {
@@ -59,26 +79,30 @@
 
   return t;
 }(document, "script", "twitter-wjs"));</script>
-<h2>Tweet</h2>
-<a class="twitter-share-button"
+
+<table border="1">
+<tr>
+<th>Tweet</th><th>Follow</th><th>Embedded timeline</th><th>Embedded tweet</th>
+</tr>
+<tr>
+<td><a class="twitter-share-button"
   href="https://twitter.com/intent/tweet?text=Hello%20world"
   data-size="large">
-Tweet</a>
-<h2>Follow</h2>
-<a class="twitter-follow-button"
+Tweet</a></td>
+<td><a class="twitter-follow-button"
   href="https://twitter.com/Brave"
   data-size="large">
-Follow @Brave</a>
-<h2>Embedded timeline</h2>
-<a class="twitter-timeline"
+Follow @Brave</a></td>
+<td width="300"><a class="twitter-timeline"
   href="https://twitter.com/Brave"
   data-width="300"
   data-height="300">
-Tweets by @Brave
-</a>
-<h2>Embedded tweet</h2>
-<blockquote class="twitter-tweet" data-lang="en">
+Tweets by @Brave</a></td>
+<td><blockquote class="twitter-tweet" data-lang="en">
   <p lang="en" dir="ltr">...</p>&mdash; Brave Software (@brave) <a href="https://twitter.com/brave/status/794221010484502528">3 Nov 2016</a>
-</blockquote>
+</blockquote></td>
+</tr>
+</table>
+
 </body>
 </html>
