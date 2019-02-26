@@ -13,7 +13,9 @@
 
 <p>Sub-resources:
 <ul>
-<li><iframe width="400" height="400" src="https://www.whatismyreferer.com"></iframe> (should be spoofed)</li>
+<li>same-origin sub-resource: <iframe width="500" height="50" src="show-referrer.html"></iframe> (should be untouched)</li>
+<li>cross-origin sub-resource: <iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe> (should be spoofed to <code>https://www.whatismyreferer.com</code>)</li>
+<li>cross-origin sub-resource: <iframe width="500" height="50" src="https://fmarier.org/files/show-referrer.html"></iframe> (should be spoofed to <code>https://fmarier.org</code>)</li>
 </ul></p>
 
 </body>
