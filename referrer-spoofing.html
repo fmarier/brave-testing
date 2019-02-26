@@ -5,18 +5,20 @@
 
 <h1>Referrer Spoofing</h1>
 
-<p>Navigations:
+<p>Top-level navigations:
 <ul>
 <li><a href="show-referrer.html">same-origin navigation</a> (should be untouched)</li>
 <li><a href="https://www.whatismyreferer.com">cross-origin navigation</a> (should be blank)</li>
 </ul></p>
 
-<p>Sub-resources:
+<p>iframe navigations:
 <ul>
-<li>same-origin sub-resource: <iframe width="500" height="50" src="show-referrer.html"></iframe> (should be untouched)</li>
-<li>cross-origin sub-resource: <iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe> (should be spoofed to <code>https://www.whatismyreferer.com</code>)</li>
-<li>cross-origin sub-resource: <iframe width="500" height="50" src="https://fmarier.org/files/show-referrer.html"></iframe> (should be spoofed to <code>https://fmarier.org</code>)</li>
+<li>same-origin navigation: <iframe width="500" height="50" src="show-referrer.html"></iframe> (should be untouched)</li>
+<li>cross-origin navigation: <iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe> (should be blank)</li>
+<li>cross-origin navigation: <iframe width="500" height="50" src="https://fmarier.org/files/show-referrer.html"></iframe> (should be blank)</li>
 </ul></p>
+
+<p><img title="sub-resource (should be spoofed to https://fmarier.org)" src="https://fmarier.org/img/francois_marier.jpg"></p>
 
 </body>
 </html>
