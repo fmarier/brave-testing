@@ -7,11 +7,14 @@
 
 <p>Navigations:
 <ul>
-<li><a href="blank.html">same-origin navigation</a> (should be untouched)</li>
+<li><a href="show-referrer.html">same-origin navigation</a> (should be untouched)</li>
 <li><a href="https://www.whatismyreferer.com">cross-origin navigation</a> (should be blank)</li>
-</ul></p
+</ul></p>
 
-<p><img title="sub-resource (should be spoofed)" src="https://fmarier.org/img/francois_marier.jpg"></p>
+<p>Sub-resources:
+<ul>
+<li><iframe width="400" height="400" src="https://www.whatismyreferer.com"></iframe> (should be spoofed)</li>
+</ul></p>
 
 </body>
 </html>
