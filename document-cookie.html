@@ -1,0 +1,30 @@
+<html>
+<body>
+<p>Set a cookie using <code>document.cookie</code>:
+<ul>
+    <li><button onclick="setNormalCookie()">normal cookie</button></li>
+    <li><button onclick="setHttpOnlyCookie()"><code>httponly</code> cookie</button></li>
+</ul>
+</p>
+
+<p>Cookies visible to JS:
+<blockquote><code><span id="cookies">...</span></code></blockquote>
+<br>
+<button onclick="getCookies()">Refresh</button></p>
+
+<script>
+function setNormalCookie() {
+    document.cookie = 'test1=yes; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+
+function setHttpOnlyCookie() {
+    document.cookie = 'test2=yes; httponly; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+}
+
+function getCookies() {
+    let cookies = document.getElementById('cookies');
+    cookies.innerHTML = document.cookie;
+}
+</script>
+</body>
+</html>
