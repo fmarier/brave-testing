@@ -2,7 +2,9 @@
 <body>
 <p>Set a cookie using <code>document.cookie</code>:
 <ul>
-    <li><button onclick="setNormalCookie()">normal cookie</button></li>
+    <li><button onclick="setExpiresCookie()">normal cookie using <code>Expires</code></button></li>
+    <li><button onclick="setMaxAgeCookie()">normal cookie using <code>Max-Age</code></button></li>
+    <li><button onclick="setBothCookie()">normal cookie using both <code>Expires</code> and <code>Max-Age</code></button> (<code>Max-Age</code> wins)</li>
     <li><button onclick="setHttpOnlyCookie()"><code>httponly</code> cookie</button></li>
 </ul>
 </p>
@@ -13,12 +15,20 @@
 <button onclick="getCookies()">Refresh</button></p>
 
 <script>
-function setNormalCookie() {
+function setExpiresCookie() {
     document.cookie = 'test1=yes; expires=Fri, 31 Dec 9999 23:59:59 GMT';
 }
 
+function setMaxAgeCookie() {
+    document.cookie = 'test2=yes; max-age=630720000'; // 20 years
+}
+
+function setBothCookie() {
+    document.cookie = 'test3=yes; max-age=630720000; expires=Fri, 31 Dec 9999 23:59:59 GMT'; // 20 years
+}
+
 function setHttpOnlyCookie() {
-    document.cookie = 'test2=yes; httponly; expires=Fri, 31 Dec 9999 23:59:59 GMT';
+    document.cookie = 'test4=yes; httponly; expires=Fri, 31 Dec 9999 23:59:59 GMT';
 }
 
 function getCookies() {
