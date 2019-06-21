@@ -114,5 +114,37 @@ Tweets by @Brave</a></td>
 </tr>
 </table>
 
+<h1>YouTube</h1>
+<script src="https://apis.google.com/js/platform.js"></script>
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+function onYouTubeIframeAPIReady() {
+    new YT.Player('ytplayer2', {
+        height: '300',
+        width: '300',
+        videoId: 'kLiLOkzLetE'
+    });
+}
+</script>
+
+<table border="1">
+<tr>
+<th>Video (iframe tag)</th><th>Video (IFrame Player API)</th>
+</tr>
+<tr>
+<td width="300"><iframe id="ytplayer" type="text/html" width="300" height="300"
+  src="https://www.youtube.com/embed/kLiLOkzLetE"
+  frameborder="0">Video (iframe tag)</iframe></td>
+<td width="300"><div id="ytplayer2">Video (IFrame Player API)</div></td>
+</tr>
+<tr>
+<th>Playlist</th><th>Subscribe button</th>
+</tr>
+<tr>
+<td width="300"><iframe width="300" height="300" src="https://www.youtube.com/embed/videoseries?list=PLhTauzvqZUB85E4Bj5JUHRNOWMo0MuYnu" frameborder="0">Playlist</iframe></td>
+<td width="300"><div class="g-ytsubscribe" data-channel="GoogleDevelopers" data-layout="default" data-count="default">Subscribe button</div></td>
+</tr>
+</table>
+
 </body>
 </html>
