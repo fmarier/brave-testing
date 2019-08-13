@@ -146,5 +146,30 @@ function onYouTubeIframeAPIReady() {
 </tr>
 </table>
 
+<h1>Disqus</h1>
+<script id="dsq-count-scr" src="//brave-testing.disqus.com/count.js" async></script>
+<script>
+var disqus_config = function () {
+this.page.url = 'https://fmarier.github.io/brave-testing/social-widgets.html';
+this.page.identifier = 'testing1';
+};
+(function() {
+var d = document, s = d.createElement('script');
+s.src = 'https://brave-testing.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<table border="1">
+<tr>
+<th>Comment thread</th><th>Comment count</th>
+</tr>
+<tr height="300">
+<td width="500"><div id="disqus_thread"></div></td>
+<td width="100"><a href="https://fmarier.github.io/brave-testing/social-widgets.html#disqus_thread">Link</a>.</td>
+</tr>
+</table>
+
 </body>
 </html>
