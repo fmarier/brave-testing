@@ -13,10 +13,24 @@
 
 <p>iframe navigations:
 <ul>
-<li>same-origin navigation: <iframe width="500" height="50" src="show-referrer.html"></iframe> (should be untouched)</li>
-<li>cross-origin navigation: <iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe> (should be spoofed to https://www.whatismyreferer.com)</li>
-<li>cross-origin navigation: <iframe width="500" height="50" src="https://fmarier.org/files/show-referrer.html"></iframe> (should be spoofed to https://fmarier.org)</li>
+<li>same-origin navigation:
+    <br><iframe width="500" height="50" src="show-referrer.html"></iframe>
+    <br>(should be untouched)</li>
+<li>cross-origin navigation:
+    <br><iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe>
+    <br>(should be spoofed to https://www.whatismyreferer.com)</li>
+<li>cross-origin navigation (redirected via <tt>meta</tt>):
+    <br><iframe width="500" height="350" src="redirect-to-whatismyreferer.html"></iframe>
+    <br>(should be spoofed to https://www.whatismyreferer.com)</li>
+<li>cross-origin navigation (redirected via an insecure <tt>301</tt>):
+    <br><iframe width="500" height="350" src="http://fmarier.github.io/brave-testing/show-referrer.html"></iframe>
+    <br>(should be blank)</li>
+<li>cross-origin navigation:
+    <br><iframe width="500" height="50" src="https://fmarier.org/referrer/show-referrer.html"></iframe>
+    <br>(should be spoofed to https://fmarier.org)</li>
 </ul></p>
+
+<p>More <a href="https://fmarier.org/referrer/redirects.html">redirection-based tests</a>.</p>
 
 <p><img title="sub-resource (should be spoofed to https://fmarier.org)" src="https://fmarier.org/img/francois_marier.jpg"></p>
 
