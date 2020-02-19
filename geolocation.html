@@ -10,6 +10,7 @@ function geoFindMe() {
   mapLink.textContent = '';
 
   function success(position) {
+    console.log(position);
     const latitude  = position.coords.latitude;
     const longitude = position.coords.longitude;
 
