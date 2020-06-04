@@ -1,0 +1,17 @@
+<html>
+<head>
+    <link rel="prefetch" href="https://fmarier.org/same-site/redirect4.html">
+</head>
+<body>
+<ol>
+<li>Set some cookies by visiting <a href="https://fmarier.org/same-site/set-cookies.html">this page</a>.</li>
+<li>Check that the cookies were set by visiting <a href="https://fmarier.org/same-site/get-cookies.html">this page</a>.</li>
+<li>Open the network tab of the devtools.</li>
+<li>Force-reload the current page.</li>
+<li>Look for a network request to <tt>https://fmarier.org/same-site/redirect4.html</tt>. It should:
+    <ul>
+        <li>not have any cookies attached to it since we always block third-party cookies, and</li>
+        <li>fail to redirect to <tt>https://fmarier.org/same-site/get-cookies.html</tt>.</li>
+    </ul>
+</body>
+</html>
