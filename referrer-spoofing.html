@@ -18,16 +18,16 @@
     <br>(should be untouched)</li>
 <li>cross-origin navigation:
     <br><iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe>
-    <br>(should be spoofed to https://www.whatismyreferer.com)</li>
+    <br>(should be trimmed to https://fmarier.github.io/)</li>
 <li>cross-origin navigation (redirected via <tt>meta</tt>):
     <br><iframe width="500" height="350" src="redirect-to-whatismyreferer.html"></iframe>
-    <br>(should be spoofed to https://www.whatismyreferer.com)</li>
+    <br>(should be trimmed to https://fmarier.github.io/)</li>
 <li>cross-origin navigation (redirected via an insecure <tt>301</tt>):
     <br><iframe width="500" height="350" src="http://fmarier.github.io/brave-testing/show-referrer.html"></iframe>
     <br>(should be blank)</li>
 <li>cross-origin navigation:
     <br><iframe width="500" height="50" src="https://referrer.fmarier.org/show-referrer.html"></iframe>
-    <br>(should be spoofed to https://referrer.fmarier.org)</li>
+    <br>(should be trimmed to https://fmarier.github.io/)</li>
 </ul></p>
 
 <p>More <a href="https://referrer.fmarier.org/redirects.html">redirection-based</a> and <a href="https://referrer.fmarier.org/samesite.html">same-site</a> tests.</p>
