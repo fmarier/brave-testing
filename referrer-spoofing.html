@@ -11,6 +11,20 @@
 <li><a href="https://www.whatismyreferer.com">cross-origin navigation</a> (should be blank)</li>
 </ul></p>
 
+<p>Form-submission:
+<ul>
+<form action="https://referrer.fmarier.org/show-referrer.html" method="POST">
+<li>
+<input type="submit" value="cross-origin submission"> (should be trimmed to <tt>https://fmarier.github.io/</tt>)
+</li>
+</form>
+<form action="show-referrer.html" method="POST">
+<li>
+<input type="submit" value="same-origin submission"> (should be untouched)
+</li>
+</form>
+</ul>
+
 <p>iframe navigations:
 <ul>
 <li>same-origin navigation:
