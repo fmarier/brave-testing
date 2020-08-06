@@ -8,7 +8,7 @@
 <p>Top-level navigations:
 <ul>
 <li><a href="show-referrer.html">same-origin navigation</a> (should be untouched)</li>
-<li><a href="https://www.whatismyreferer.com">cross-origin navigation</a> (should be blank)</li>
+<li><a href="https://fmarier.org/my-referrer/">cross-origin navigation</a> (should be blank)</li>
 </ul></p>
 
 <p>Form-submission:
@@ -29,13 +29,13 @@
     <br><iframe width="500" height="50" src="show-referrer.html"></iframe>
     <br>(should be untouched)</li>
 <li>cross-origin navigation:
-    <br><iframe width="500" height="350" src="https://www.whatismyreferer.com"></iframe>
+    <br><iframe width="500" height="50" src="https://fmarier.org/my-referrer/"></iframe>
     <br>(should be trimmed to https://fmarier.github.io/)</li>
 <li>cross-origin navigation (redirected via <tt>meta</tt>):
-    <br><iframe width="500" height="350" src="redirect-to-whatismyreferer.html"></iframe>
+    <br><iframe width="500" height="50" src="redirect-to-whatismyreferer.html"></iframe>
     <br>(should be trimmed to https://fmarier.github.io/)</li>
 <li>cross-origin navigation (redirected via an insecure <tt>301</tt>):
-    <br><iframe width="500" height="350" src="http://fmarier.github.io/brave-testing/show-referrer.html"></iframe>
+    <br><iframe width="500" height="50" src="http://fmarier.github.io/brave-testing/show-referrer.html"></iframe>
     <br>(should be blank)</li>
 <li>cross-origin navigation:
     <br><iframe width="500" height="50" src="https://referrer.fmarier.org/show-referrer.html"></iframe>
