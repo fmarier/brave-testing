@@ -5,6 +5,10 @@
 <body>
 <p>You need to open each of these links in a private window and <b>close all private windows in between each test case</b>.</p>
 
+<h2>Cross-site tests</h2>
+
+<p>In all of these cases, the <tt>fbclid</tt> parameter should be <b>missing</b> from the landing page.</p>
+
 <p><ul>
 <li><a href="https://fmarier.org/query-filter/?fbclid=1234">Query string parameter present in original link</a></li>
 <li><a href="https://fmarier.org/query-filter/redirect1">Query string parameters added during 301 redirect</a></li>
@@ -14,6 +18,15 @@
 <li><a href="https://fmarier.org/query-filter/redirect5">Query string parameters added during 308 redirect</a></li>
 </ul></p>
 
-<p>In addition to looking at the query string on the final landing page, you should tail the logs to ensure that there are no bad query string parameters in any of the intermediate redirection steps.</p>
+<p>In addition to looking at the query string on the final landing page, you should ideally tail the logs to ensure that there are no bad query string parameters in any of the intermediate redirection steps.</p>
+
+<h2>Same-site tests</h2>
+
+<p>In all of these cases, the <tt>fbclid</tt> parameter should be <b>present</b> on the landing page.</p>
+
+<p><ul>
+<li><a href="blank.html?fbclid=1234">Query string parameter present in original same-origin link</a></li>
+</ul></p>
+
 </body>
 </html>
