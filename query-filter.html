@@ -11,18 +11,28 @@
 
 <p><ul>
 <li><a href="https://fmarier.org/query-filter/?fbclid=1234">Cross-origin navigation</a></li>
+<li><a href="https://fmarier.org/query-filter/xredirect1">Cross-origin navigation to cross-origin 301 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/xredirect2">Cross-origin navigation to cross-origin 302 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/xredirect3">Cross-origin navigation to cross-origin 303 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/xredirect4">Cross-origin navigation to cross-origin 307 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/xredirect5">Cross-origin navigation to cross-origin 308 redirect</a></li>
 </ul></p>
 
-<h2>Redirected tests</h2>
+<h2>Redirected same-site tests</h2>
 
 <p>In all of these cases, the <tt>fbclid</tt> parameter should be <b>present</b> on the landing page, but the <tt>gclid</tt> parameter should be <b>missing</b> in the intermediate step (client-side redirection).</p>
 
 <p><ul>
-<li><a href="https://fmarier.org/query-filter/redirect1.html?gclid=abc">Cross-origin navigation to same-origin 301 redirect</a></li>
-<li><a href="https://fmarier.org/query-filter/redirect2.html?gclid=abc">Cross-origin navigation to same-origin 302 redirect</a></li>
-<li><a href="https://fmarier.org/query-filter/redirect3.html?gclid=abc">Cross-origin navigation to same-origin 303 redirect</a></li>
-<li><a href="https://fmarier.org/query-filter/redirect4.html?gclid=abc">Cross-origin navigation to same-origin 307 redirect</a></li>
-<li><a href="https://fmarier.org/query-filter/redirect5.html?gclid=abc">Cross-origin navigation to same-origin 308 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect1?gclid=def">Cross-origin navigation to same-origin 301 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect2?gclid=def">Cross-origin navigation to same-origin 302 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect3?gclid=def">Cross-origin navigation to same-origin 303 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect4?gclid=def">Cross-origin navigation to same-origin 307 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect5?gclid=def">Cross-origin navigation to same-origin 308 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect1.html?gclid=abc">Cross-origin navigation, then same-origin navigation to same-origin 301 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect2.html?gclid=abc">Cross-origin navigation, then same-origin navigation to same-origin 302 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect3.html?gclid=abc">Cross-origin navigation, then same-origin navigation to same-origin 303 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect4.html?gclid=abc">Cross-origin navigation, then same-origin navigation to same-origin 307 redirect</a></li>
+<li><a href="https://fmarier.org/query-filter/redirect5.html?gclid=abc">Cross-origin navigation, then same-origin navigation to same-origin 308 redirect</a></li>
 </ul></p>
 
 <h2>Same-site tests</h2>
