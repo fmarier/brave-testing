@@ -8,7 +8,8 @@
 <p>Top-level navigations:
 <ul>
 <li><a href="show-referrer.html">same-origin navigation</a> (should be untouched)</li>
-<li><a href="https://fmarier.org/my-referrer/">cross-origin navigation</a> (should be blank)</li>
+<li><a href="https://fmarier.org/my-referrer/">cross-origin navigation</a> (should be trimmed to <tt>https://fmarier.github.io/</tt>)</li>
+<li><a href="http://fmarier.com/referrer/show-referrer.html">cross-origin HTTP navigation</a> (should be blank)</li>
 </ul></p>
 
 <p>Form-submission:
@@ -17,10 +18,15 @@
 <li>
 <input type="submit" value="cross-origin submission"> (should be trimmed to <tt>https://fmarier.github.io/</tt>)
 </li>
+</form>
+<form action="http://fmarier.com/referrer/show-referrer.html" method="POST">
+<li>
+<input type="submit" value="cross-origin HTTP submission"> (should be blank)
+</li>
+</form>
 <li>
 <a href="https://referrer.fmarier.org/form-submission.html">same-origin submission</a>
 </li>
-</form>
 </ul>
 
 <p>iframe navigations:
