@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<script>
+console.log("crossOriginIsolated: " + (crossOriginIsolated ? "yes" : "no"));
+
+var w = new Worker("https://fmarier.org/sharedarraybuffer.js");
+w.onmessage = function (ev) {
+  var first = Atomics.load(ia, 0);
+  var second = Atomics.load(ia, 1);
+  console.log("Page received: " + first + ", " + second);
+}
+
+var sab = new SharedArrayBuffer(Int32Array.BYTES_PER_ELEMENT * 2);
+var ia = new Int32Array(sab);
+Atomics.store(ia, 0, 1);
+Atomics.store(ia, 1, 2);
+w.postMessage(ia);
+</script>
+</body>
+</html>
