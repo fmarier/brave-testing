@@ -5,7 +5,7 @@
 <script>
 console.log("crossOriginIsolated: " + (crossOriginIsolated ? "yes" : "no"));
 
-var w = new Worker("https://fmarier.org/sharedarraybuffer.js");
+var w = new Worker("sharedarraybuffer.js");
 w.onmessage = function (ev) {
   var first = Atomics.load(ia, 0);
   var second = Atomics.load(ia, 1);
