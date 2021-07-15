@@ -1,0 +1,32 @@
+<html>
+<body>
+<script>
+function isBraveUA() {
+  if (!window.Promise) {
+    return false;
+  }
+  if (typeof navigator.brave == "undefined" ||
+      typeof navigator.brave.isBrave != "function") {
+    return new Promise(function (resolve) {
+      resolve(false);
+    });
+  }
+  return navigator.brave.isBrave()
+    .then((response) => {
+      return response;
+    })
+    .catch((error) => {
+      return false;
+    });
+}
+
+isBraveUA().then((result) => {
+  if (result) {
+    console.log("Brave detected");
+  } else {
+    console.log("Brave not detected");
+  }
+});
+</script>
+</body>
+</html>
