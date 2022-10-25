@@ -1,6 +1,16 @@
+<h2>Interaction with other features</h2>
 <p>To test <a href="https://github.com/brave/brave-browser/issues/25845">brave/brave-browser#25845</a>, right click on each of these links and then choose "Copy clean link". Then paste them in a text editor.</p>
 <p>In both cases, the URL that you pasted should be <b><tt>https://example.com/</tt></b> (the trailing slash is not important and it's okay if it's missing).</p>
 <ul>
 <li><a href="https://dev-pages.brave.software/navigation-tracking/error.html?brave_testing=https://example.com">To run through debouncer</a></li>
 <li><a href="https://example.com/?fbclid=1234">To run through query filter</a></li>
+</ul>
+
+<h2>Restriction to HTTP and HTTPS</h2>
+<p>To test <a href="https://github.com/brave/brave-browser/issues/26236">brave/brave-browser#26236</a>, right click on each of these links and then choose "Copy clean link". Then paste them in a text editor.</p>
+<p>In both cases, the links should keep their <tt>utm_source=web</tt> query parameter when copied.</p>
+<ul>
+<li><a href="file:///home/francois/devel/brave-testing/copy-clean-link.html?utm_source=web">file URI</a></li>
+<li><a href="data:text/html,foo?utm_source=web">data URI</a></li>
+<li><a href="ws://localhost:8080/?utm_source=web">websocket</a></li>
 </ul>
