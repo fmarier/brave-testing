@@ -1,3 +1,4 @@
+<h1>Copy clean link test cases</h1>
 <h2>Interaction with other features</h2>
 <p>To test <a href="https://github.com/brave/brave-browser/issues/25845">brave/brave-browser#25845</a>, right click on each of these links and then choose "Copy clean link". Then paste them in a text editor.</p>
 <p>In both cases, the URL that you pasted should be <b><tt>https://example.com/</tt></b> (the trailing slash is not important and it's okay if it's missing).</p>
@@ -7,10 +8,33 @@
 </ul>
 
 <h2>Restriction to HTTP and HTTPS</h2>
-<p>To test <a href="https://github.com/brave/brave-browser/issues/26236">brave/brave-browser#26236</a>, right click on each of these links and then choose "Copy clean link". Then paste them in a text editor.</p>
-<p>In both cases, the links should <b>keep</b> their <tt>utm_source=web</tt> query parameter when copied.</p>
+<p>To test <a href="https://github.com/brave/brave-browser/issues/26236">brave/brave-browser#26236</a>, right click on each of these links and then look for "Copy clean link". This option should <b>not be present</b>.</p>
 <ul>
 <li><a href="file:///home/francois/devel/brave-testing/copy-clean-link.html?utm_source=web">file URI</a></li>
 <li><a href="data:text/html,foo?utm_source=web">data URI</a></li>
 <li><a href="ws://localhost:8080/?utm_source=web">websocket</a></li>
 </ul>
+<p>Next, visit each of the above URLs by:
+<ol>
+<li>Right-clicking on the link.</li>
+<li>Copying the URL (regular copy).</li>
+<li>Pasting the URL into the URL bar of a new tab.</li>
+</ol></p>
+<p>Test that the other two hooks for this feature are <b>missing</b>:
+<ol>
+<li>Click the share icon in the URL bar (three dots linked by two lines) and confirm that a "Copy clean link" item is <b>not present</b>.</li>
+<li>Select the URL in the URL bar and confirm that the context menu also <b>doesn't show</b> "Copy clean link".</li>
+</ol></p>
+<h2>Normal case</h2>
+<p>Finally, to ensure that the basic feature is still working:
+<ol>
+<li>Right-click on <a href="https://brave.com/?utm_source=foo">this link</a> and select "Copy clean link".</li>
+<li>Paste in a text editor and confirm that only <b><tt>https://brave.com/</tt></b> was copied (no <tt>utm_source=foo</tt>).</li>
+<li>Right-click on <a href="https://brave.com/?utm_source=foo">this link</a> and open in a new tab.</li>
+<li>Ensure that the URL bar shows <b><tt>https://brave.com/?utm_source=foo</tt></b> (<b>including</b> the <tt>utm_source=foo</tt>).
+<li>Click the share button and then "Copy clean link".</li>
+<li>Paste in a text editor and confirm that only <b><tt>https://brave.com/</tt></b> was copied (no <tt>utm_source=foo</tt>).</li>
+<li>Select the URL in the URL bar and select "Copy clean link".</li>
+<li>Paste in a text editor and confirm that only <b><tt>https://brave.com/</tt></b> was copied (no <tt>utm_source=foo</tt>).</li>
+</ol>
+</p>
