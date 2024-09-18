@@ -1,0 +1,12 @@
+<script>
+function copyToClipboard() {
+  var text = document.getElementById("to-copy").value;
+  navigator.clipboard.writeText(text).then(function() {
+    console.log('Copied this to the clipboard: ', text);
+  }, function(err) {
+    console.error('Could not copy to clipboard: ', err);
+  });
+}
+</script>
+<input id="to-copy" value="A:^C,D"></input>
+<button onclick="javascript:copyToClipboard()">Copy to clipboard</button>
